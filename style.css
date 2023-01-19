@@ -398,6 +398,14 @@ hr.line {
   color: #253858;
 }
 
+.contact-me {
+  margin-top: 5px;
+}
+
+.about-contact {
+  background-color: #fff;
+}
+
 .content {
   border-top-left-radius: 90px;
   text-align: center;
@@ -514,12 +522,11 @@ button:disabled {
 }
 
 .navbar-links > li > a:hover {
-  color: var(--black-color);
   animation: glowing 20s linear infinite;
   opacity: 0;
   transition: opacity 9s ease-in-out;
   border-radius: 10px;
-  background-color: var(--button-color);
+  color: var(--button-color);
 }
 
 .social-icon > a > img:hover {
@@ -558,14 +565,13 @@ button:disabled {
   header {
     width: 100%;
     position: fixed;
-    top: -2vh;
+    top: -12vh;
     background: white;
     z-index: 1;
-    height: 10px;
   }
 
   .navbar {
-    margin-top: -2%;
+    margin-top: 20px;
   }
 
   .logo {
@@ -581,7 +587,8 @@ button:disabled {
   .navbar-links {
     display: flex;
     min-width: 35%;
-    justify-content: space-between;
+    color: #344563;
+    gap: 4em;
   }
 
   .navbar-links > li > a {
@@ -589,7 +596,7 @@ button:disabled {
   }
 
   .small-container {
-    margin-top: 5.5%;
+    margin-top: 9%;
     background: url(./images-portfolio-desktop/Header\ bg.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -603,6 +610,26 @@ button:disabled {
     line-height: 60px;
     letter-spacing: 0.37px;
     margin-bottom: 2px;
+    margin-inline: 260px;
+  }
+
+  .personal-info > h2 {
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.37px;
+    margin-bottom: 2px;
+  }
+
+  .small-container .paragraph-text {
+    margin-inline: 260px;
+  }
+
+  .small-container .social-link {
+    margin-inline: 260px;
+  }
+
+  .small-container .social-media-link {
+    margin-inline: 260px;
   }
 
   .skills > span > img {
@@ -617,17 +644,22 @@ button:disabled {
   }
 
   .card-item {
-    width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 16px;
     padding-bottom: 22px;
+    width: 1156px;
+    height: 410px;
+    margin-inline: 142px;
+    gap: -114rem;
   }
 
   .images-tags {
     display: block;
-    max-width: 100%;
-    width: 100%;
+    width: 544px;
+    height: 448px;
+    left: 24px;
+    top: 24px;
+    border-radius: 8px;
   }
 
   .images-tags > a > img {
@@ -648,10 +680,12 @@ button:disabled {
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1rem;
     line-height: 2rem;
     color: #091e42;
     margin-bottom: 0;
+    display: flex;
+    margin-inline-start: -2px;
   }
 
   .title2,
@@ -668,10 +702,16 @@ button:disabled {
     position: relative;
     top: -2vh;
     left: 0;
+    margin-inline-start: -46px;
+    font-weight: 700;
+    font-size: 30px;
   }
 
   .title3::after {
     content: "Uber Navigation";
+    margin-inline-start: -170px;
+    font-weight: 700;
+    font-size: 30px;
   }
 
   .description {
@@ -770,13 +810,6 @@ button:disabled {
     justify-content: center;
   }
 
-  .personal-info > h1 {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    color: #091e42;
-    margin-bottom: 3px;
-  }
-
   .personal-info > .paragraph-text {
     line-height: 22px;
   }
@@ -828,7 +861,7 @@ button:disabled {
   }
 
   .content > h1 {
-    font-size: 40px;
+    font-size: 32px;
     line-height: 52px;
   }
 
