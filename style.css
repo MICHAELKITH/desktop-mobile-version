@@ -321,18 +321,18 @@ h1 {
 .more-button-1 {
   border: 1px solid #6070ff;
   border-radius: 8px;
-  width: 128px;
-  height: 48px;
+  width: 138px;
+  height: 68px;
   padding: 12px;
+  color: white;
   gap: 10px;
   background-color: var(--button-color);
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 17pt;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: var(--tag-background-color);
   text-align: center;
   transition: width 2s, height 4s;
 }
@@ -883,6 +883,7 @@ button:disabled {
 
   .submit {
     margin-left: 5rem;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
   }
 
   .about-contact {
