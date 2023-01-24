@@ -17,7 +17,7 @@
   --tag-background-color: #ebebff;
   --button-color: #396df2;
   --tag-color: #7a869a;
-  --footer-background: #6070ff;
+  --footer-background: hsl(234, 100%, 52%);
 }
 
 /* animations */
@@ -870,7 +870,7 @@ button:disabled {
     font-size: 20px;
     line-height: 28px;
     padding: 0 10%;
-    color: #080808;
+    color: hsl(0, 0%, 100%);
   }
 
   .round {
