@@ -8,7 +8,7 @@ const navItems = document.querySelectorAll(".nav-item");
 const navbarLinks = document.querySelector(".navbar-links");
 
 // Set the initial state of the menu
-let showMenu = true;
+let showMenu = false;
 
 menuBtn.addEventListener("click", toggleMenu);
 
@@ -21,7 +21,7 @@ function toggleMenu() {
 
     // Reset the menu state
     showMenu = true;
-  } else {
+  } else{
     menuBtn.classList.remove("close");
     menu.classList.remove("show");
     menuNav.classList.remove("show");

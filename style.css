@@ -123,11 +123,9 @@ header {
 }
 
 .navbar {
-  display: flex;
   justify-content: space-between;
   padding: 0 0.2%;
-  /* flex-direction: column;
-  align-items: flex-start; */
+
 }
 
 .logo {
@@ -190,6 +188,7 @@ header {
   width: 100%;
   opacity: 0.9;
   visibility: hidden;
+  gap: -10rem;
 }
 
 .navbar-links.show {
@@ -198,7 +197,7 @@ header {
 
 /* Adding a transition delay to the
 4 items in the navigation menu */
-.nav-item:nth-child(1) {
+/* .nav-item:nth-child(1) {
   transition-delay: 0.1s;
 }
 
@@ -212,36 +211,36 @@ header {
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s;
-}
+} */
 .navbar-links {
   position: fixed;
-  top: 50px;
+  top: 70px;
   width: 100%;
   height: 100vh;
   opacity: 0.9;
   visibility: hidden;
-
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
 }
 
 .navbar-links li {
-
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 1rem;
+  margin-top: 3rem;
   margin-inline: 140px;
+
   
 }
-
 .navbar-links li a {
   text-align: center;
   text-decoration: none;
+  background-color: #2230d2;
+  font-weight: 400;
+  font-size: 17pt;
+  border-radius: 10px;
+  color: var(--gray--light-color);
 
 }
-
-.nav-item {
-  flex-direction: column;
-}
-
 
 h1 {
   padding-top: 5%;
@@ -643,13 +642,14 @@ button:disabled {
   header {
     width: 100%;
     position: fixed;
-    top: -12vh;
+    top: -9vh;
     background: white;
     z-index: 1;
   }
 
   .navbar {
-    margin-top: 20px;
+    margin-top: 30px;
+    display: flex;
   }
 
   .logo {
@@ -659,25 +659,28 @@ button:disabled {
   }
 
   .bar-toggle {
-    display: block;
-    visibility: hidden;
-  }
-
-  .navbar-links {
     display: flex;
-    min-width: 35%;
-    color: #344563;
-    gap: 2em;
-    background-color: none;
-
+  }
+  .menu{
+    margin-top: -30px;
   }
 
-  .navbar-links ul li a {
+   .navbar-links {
+    display: flex;
+    margin-bottom: 100px;
+    min-width: 5%;
+    color: #344563;
+  }
+  .navbar-links li a {
     text-align: center;
     text-decoration: none;
     gap: -5rem;
     font-size: 20px;
   }
+  .navbar-links ul li a{
+    padding: 10px 25px;
+    display: block;
+  } 
 
 
   .small-container {
