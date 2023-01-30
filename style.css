@@ -581,11 +581,11 @@ button:disabled {
   }
 
   .bar-toggle {
-    display: none;
+    display: block;
   }
 
   .navbar-links {
-    display: flex;
+    display: block;
     min-width: 35%;
     color: #344563;
     gap: 4em;
