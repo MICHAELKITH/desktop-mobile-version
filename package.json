@@ -1,0 +1,27 @@
+{
+  "name": "desktop-mobile-version",
+  "version": "1.0.0",
+  "description": "- [📗 Table of Contents](#-table-of-contents)\r - [📖  Portfolio-Desktop-version ](#--portfolio-desktop-version-)\r   - [🛠 Built With ](#-built-with-)\r     - [Tech Stack ](#tech-stack-)\r   - [👥 Author ](#-author-)\r   - [📝 License ](#-license-)\r   - [💻 Getting Started ](#-getting-started-)\r     - [Prerequisites](#prerequisites)\r     - [Setup](#setup)\r     - [Install](#install)\r     - [Usage](#usage)\r     - [Run tests](#run-tests)\r     - [Deployment](#deployment)\r   - [🔭 Future Features ](#-future-features-)\r   - [🤝 Contributing ](#-contributing-)\r   - [⭐️ Show your support ](#️-show-your-support-)\r   - [🙏 Acknowledgments ](#-acknowledgments-)\r   - [❓ FAQ ](#-faq-)\r   - [📝 License ](#-license--1)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MICHAELKITH/desktop-mobile-version.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MICHAELKITH/desktop-mobile-version/issues"
+  },
+  "homepage": "https://github.com/MICHAELKITH/desktop-mobile-version#readme",
+  "devDependencies": {
+    "hint": "^7.1.3",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}
