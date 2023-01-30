@@ -47,7 +47,7 @@
   }
 
   to {
-    left: 20px;
+    left: 200px;
   }
 }
 
@@ -117,22 +117,18 @@ li {
 header {
   width: 100%;
   position: fixed;
-  height: 48px;
+  height: 60px;
   top: -1px;
   padding: 5%;
   background-color: var(--main-bg-color);
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
   padding: 0 3%;
+  align-items: center;
 }
-
-
 .logo {
   display: flex;
-  align-self: flex-end;
+margin-top: 1.5rem;
   animation: my-move 3s 1 linear 1s;
   width: 76px;
   height: 20px;
@@ -193,29 +189,39 @@ header {
   color: #172b4d;
 }
 .menu{
-  display: none;
-
-
+color: #e5e5e5;
 }
 .navbar-links.show {
-  visibility: visible;
+ display: block;
+ margin-top: -1rem;
+background-color: #2230d2;
+ height: 450px;
+position: absolute;
+left: 20;
+right: 0;
+width: 100vw;
+
+ 
 }
-/* .navbar-links {
-  position: fixed;
-  top: 70px;
-  width: 100%;
+.navbar-links{
+  display: none;
+
+}
+ /* .navbar-links {
+  top: 80px;
   height: 100vh;
   opacity: 0.9;
   visibility: hidden;
   background-color: var(--black-color);
   border-radius: 10px;
-}
+}  */
 
-.navbar-links li {
+ .navbar-links li {
   flex-direction: column;
   align-items: flex-start;
   margin-top: 3rem;
   margin-inline: 140px;
+  cursor: pointer;
 
   
 }
@@ -227,8 +233,9 @@ header {
   font-size: 17pt;
   border-radius: 10px;
   color: var(--gray--light-color);
+  cursor: pointer;
 
-} */
+}   */
 
 
 h1 {
@@ -633,24 +640,26 @@ button:disabled {
     top: -12vh;
     background: white;
     z-index: 1;
+    display: flex;
+    margin-top: 5rem;
+    flex-direction: row;
   }
-
-  .navbar {
+  /* .navbar {
     margin-top: 20px;
-  }
+  } */
 
   .logo {
     animation-play-state: running;
     align-self: center;
     animation-duration: 0.7s;
+    margin-top: 1rem;
   }
 
   .bar-toggle {
     display: none;
   }
 
-  .menu,
-  .navbar-links {
+  .menu,.navbar-links {
     display: flex;
     min-width: 35%;
     color: #344563;
@@ -659,6 +668,19 @@ button:disabled {
 
   .navbar-links > li > a {
     text-decoration: none;
+    padding: 10px 25px;
+    display: block;
+    transition: 0.2s;
+    margin: 0 5px;
+
+  }
+  .navbar-links > li > a:hover{
+    color: var(--black-color);
+
+  }
+  .navbar-links > li > a:active{
+    color: #2230d2;
+    background: var(--black-color);
   }
 
   .small-container {
