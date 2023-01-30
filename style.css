@@ -125,12 +125,13 @@ header {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 0 3%;
+  padding: 0 0.2%;
+  /* flex-direction: column;
+  align-items: flex-start; */
 }
 
 .logo {
   display: flex;
-  align-self: flex-end;
   animation: my-move 3s 1 linear 1s;
   width: 76px;
   height: 20px;
@@ -144,27 +145,103 @@ header {
 }
 
 .bar-toggle {
-  top: 0.75rem;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50px;
-  height: 21px;
-  color: #6070ff;
-}
-
-.bar-toggle > i {
-  font-size: 28px;
-  transition: all ease 300ms;
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 22px;
   cursor: pointer;
+  transition: all 0.5s ease-out;
 }
 
-.bar-toggle > i:hover {
+.bar-toggle .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background-color: #6070ff;
+  transition: all 0.5s ease-out;
+  border-radius: 10px;
+}
+
+/* Adding transform to the X */
+.bar-toggle.close {
+  transform: rotate(180deg);
+}
+
+/* Styling the three lines
+		to make it an X */
+.bar-toggle.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar-toggle.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.bar-toggle.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.bar-toggle .btn-line:hover {
   color: #172b4d;
 }
-
-.navbar-links {
-  display: none;
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
 }
+
+.navbar-links.show {
+  visibility: visible;
+}
+
+/* Adding a transition delay to the
+4 items in the navigation menu */
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.navbar-links {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.9;
+  visibility: hidden;
+
+}
+
+.navbar-links li {
+
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+  margin-inline: 140px;
+  
+}
+
+.navbar-links li a {
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.nav-item {
+  flex-direction: column;
+}
+
 
 h1 {
   padding-top: 5%;
@@ -341,7 +418,7 @@ h1 {
   width: 168px;
 }
 
-.about > h1 {
+.about>h1 {
   margin-bottom: 0;
 }
 
@@ -349,7 +426,7 @@ h1 {
   padding: 10% 0;
 }
 
-.skill-list > ul {
+.skill-list>ul {
   padding-inline-start: 2%;
 }
 
@@ -364,7 +441,7 @@ h1 {
   align-items: center;
 }
 
-.skills > span > img:hover {
+.skills>span>img:hover {
   color: var();
   background-color: var(--light-text-color);
 }
@@ -416,7 +493,7 @@ hr.line {
   background-color: var(--footer-background);
 }
 
-.content > h1 {
+.content>h1 {
   color: white;
   margin-top: 2em;
 }
@@ -521,7 +598,7 @@ button:disabled {
   color: #5e6c84;
 }
 
-.navbar-links > li > a:hover {
+.navbar-links>li>a:hover {
   animation: glowing 20s linear infinite;
   opacity: 0;
   transition: opacity 9s ease-in-out;
@@ -529,7 +606,7 @@ button:disabled {
   color: var(--button-color);
 }
 
-.social-icon > a > img:hover {
+.social-icon>a>img:hover {
   box-shadow: 1px 2px 4px 1px var(--button-disabled-text-color);
   transform: scale(1);
   background-color: var(--gray--light-color);
@@ -539,6 +616,7 @@ button:disabled {
 /* end */
 
 @media screen and (min-width: 768px) {
+
   /* images */
   .img1 {
     content: url("./images-portfolio-desktop/Snapshoot\ Portfolio.png");
@@ -589,12 +667,18 @@ button:disabled {
     display: flex;
     min-width: 35%;
     color: #344563;
-    gap: 4em;
+    gap: 2em;
+    background-color: none;
+
   }
 
-  .navbar-links > li > a {
+  .navbar-links ul li a {
+    text-align: center;
     text-decoration: none;
+    gap: -5rem;
+    font-size: 20px;
   }
+
 
   .small-container {
     margin-top: 9%;
@@ -614,7 +698,7 @@ button:disabled {
     margin-inline: 260px;
   }
 
-  .personal-info > h2 {
+  .personal-info>h2 {
     font-size: 48px;
     line-height: 60px;
     letter-spacing: 0.37px;
@@ -633,7 +717,7 @@ button:disabled {
     margin-inline: 260px;
   }
 
-  .skills > span > img {
+  .skills>span>img {
     position: relative;
     top: 10px;
     left: -80px;
@@ -663,7 +747,7 @@ button:disabled {
     border-radius: 8px;
   }
 
-  .images-tags > a > img {
+  .images-tags>a>img {
     max-width: 100%;
     display: block;
     height: auto;
@@ -811,7 +895,7 @@ button:disabled {
     justify-content: center;
   }
 
-  .personal-info > .paragraph-text {
+  .personal-info>.paragraph-text {
     line-height: 22px;
   }
 
@@ -823,7 +907,7 @@ button:disabled {
     max-width: 58%;
   }
 
-  .skill-list > ul {
+  .skill-list>ul {
     max-width: 100%;
   }
 
@@ -861,7 +945,7 @@ button:disabled {
     background-color: var(--footer-background);
   }
 
-  .content > h1 {
+  .content>h1 {
     font-size: 32px;
     line-height: 52px;
   }
