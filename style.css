@@ -116,8 +116,9 @@ li {
 
 header {
   width: 100%;
+  position: fixed;
   height: 48px;
-  top: 44px;
+  top: -1px;
   padding: 5%;
   background-color: var(--main-bg-color);
 }
@@ -127,6 +128,7 @@ header {
   justify-content: space-between;
   padding: 0 3%;
 }
+
 
 .logo {
   display: flex;
@@ -144,13 +146,42 @@ header {
 }
 
 .bar-toggle {
-  top: 0.75rem;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50px;
-  height: 21px;
-  color: #6070ff;
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
 }
+
+.bar-toggle .btn-line {
+  width: 30px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background-color: #6070ff;
+  transition: all 0.5s ease-out;
+  border-radius: 10px;
+}
+
+/* Adding transform to the X */
+.bar-toggle.close {
+  transform: rotate(180deg);
+}
+
+/* Styling the three lines
+		to make it an X */
+.bar-toggle.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar-toggle.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.bar-toggle.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
 
 .bar-toggle > i {
   font-size: 28px;
@@ -161,10 +192,44 @@ header {
 .bar-toggle > i:hover {
   color: #172b4d;
 }
-
-.navbar-links {
+.menu{
   display: none;
+
+
 }
+.navbar-links.show {
+  visibility: visible;
+}
+/* .navbar-links {
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.9;
+  visibility: hidden;
+  background-color: var(--black-color);
+  border-radius: 10px;
+}
+
+.navbar-links li {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 3rem;
+  margin-inline: 140px;
+
+  
+}
+.navbar-links li a {
+  text-align: center;
+  text-decoration: none;
+  background-color: #2230d2;
+  font-weight: 400;
+  font-size: 17pt;
+  border-radius: 10px;
+  color: var(--gray--light-color);
+
+} */
+
 
 h1 {
   padding-top: 5%;
@@ -584,6 +649,7 @@ button:disabled {
     display: none;
   }
 
+  .menu,
   .navbar-links {
     display: flex;
     min-width: 35%;
