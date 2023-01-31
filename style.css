@@ -196,11 +196,11 @@ header {
   display: block;
   margin-top: -1rem;
   background-color: white;
-  height: 450px;
+  height: 800px;
   position: absolute;
   left: 20;
   right: 0;
-  width: 100vw;
+  width: 450px;
 }
 
 .navbar-links {
