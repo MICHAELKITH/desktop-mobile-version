@@ -251,11 +251,12 @@ h1 {
   border-bottom-left-radius: 85px;
   flex-direction: column;
   width: 100%;
+  margin-top: 5rem;
   padding-left: 0.9rem;
   background-image: url(./images/header-shapes\ mobile.png);
   background-repeat: no-repeat;
   background-color: var(--main-bg-color);
-  background-size: auto;
+  background-size: 90%;
 }
 
 .about {
