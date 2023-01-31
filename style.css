@@ -190,9 +190,28 @@ header {
 
 .menu {
   color: #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #6070ff;
+  overflow-x: hidden;
+  padding: 10px 30px 0 0;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+  mix-blend-mode: multiply;
+  animation: slideleft 0.5s 1 ease-in-out;
 }
 
-.navbar-links.show {
+.hidden {
+  display: none;
+}
+
+/* .navbar-links.show {
   display: block;
   margin-top: -1rem;
   background-color: white;
@@ -201,24 +220,35 @@ header {
   left: 20;
   right: 0;
   width: 450px;
-}
+} */
 
 .navbar-links {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
 }
 
-.navbar-links li {
+#close-menu {
+  align-self: flex-end;
+  font-size: 50px;
+  margin-left: 50px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* .navbar-links li {
   flex-direction: column;
   align-items: flex-start;
   margin-top: 3rem;
   margin-inline: 140px;
   cursor: pointer;
-}
+} */
 
 .navbar-links li a {
   text-align: center;
   text-decoration: none;
-  color: #2230d2;
+  color: var(--main-bg-color);
   font-weight: 400;
   font-size: 17pt;
   border-radius: 10px;
@@ -642,24 +672,34 @@ button:disabled {
     align-self: center;
     animation-duration: 0.7s;
     margin-top: 1rem;
+    display: flex;
+    width: 100%;
   }
 
   .bar-toggle {
     display: none;
   }
 
+  #close-menu {
+    display: none;
+  }
+
   .menu,
   .navbar-links {
     display: flex;
-    min-width: 30%;
     color: #344563;
     gap: -40em;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    position: static;
+    overflow: hidden;
+    background-color: #fff;
   }
 
   .navbar-links li {
     flex-direction: row;
     align-items: flex-start;
-    margin-top: 2rem;
     margin-inline: 20px;
     cursor: pointer;
   }
@@ -672,9 +712,9 @@ button:disabled {
     border-radius: 10px;
     cursor: pointer;
     padding: 10px -5px;
-    display: block;
     transition: 0.2s;
     margin: 0 2px;
+    color: var(--secondary-text-color);
   }
 
   .navbar-links li a:hover {
