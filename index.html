@@ -38,7 +38,10 @@
             </nav>
 
         </header>
-
+        
+<!-- 
+popup -->
+        
         <!-- small-container -->
         <section class="small-container">
             <h1>
@@ -78,6 +81,45 @@
         </section>
 
 
+<section class="modal-pop" id="pop-up">
+        <div class="card-item-modal">
+            <div class="main-text">
+                <div class="modal">
+                    <h1 class="title">Tonic</h1>
+                    <button data-close-btn class="close-x ">&times;</button>
+                </div>
+               
+                <div class="images-tags">
+                    <a href="#">
+                        <img class="img1" alt="Image missing">
+                    </a>
+                </div>
+                <ul class="frame-2">
+                    <li class="top-title">Canopy</li>
+                    <li class="details"><img src="./images/Counter.png" alt="Image missing"></li>
+                    <li class="details">Back End Dev</li>
+                    <li class="details"><img src="./images/Counter.png" alt="Image missing"></li>
+                    <li class="details">2015</li>
+                </ul>
+                <p class="description">
+                    A daily selection of privately personalized reads; no accounts or sign-ups required.
+                </p>
+                <ul class="tags">
+                    <li><a href="#"><img src="./images/Tag.png" alt="Image missing"></a></li>
+                    <li><a href="#"><img src="./images/Tag (1).png" alt="Image missing"></a></li>
+                    <li><a href="#"><img src="./images/Tag(2).png" alt="Image missing"></a></li>
+                </ul>
+               <div>
+                <button>See live</button>
+                <button>See Source</button>
+               </div>
+            </div>
+        </div>
+
+    </section>
+            <div class="active"  id="overlay"></div>
+  
+
 
         <!-- card-info -->
         <section class="card-info" id="work">
@@ -104,7 +146,8 @@
                         <li><a href="#"><img src="./images/Tag (1).png" alt="Image missing"></a></li>
                         <li><a href="#"><img src="./images/Tag(2).png" alt="Image missing"></a></li>
                     </ul>
-                    <a href="#" class="more-button">See Project</a>
+                    <a href="#" data-modal-target
+                    ="#pop-up"class="more-button">See Project</a>
                 </div>
             </div>
             <div class="card-item">

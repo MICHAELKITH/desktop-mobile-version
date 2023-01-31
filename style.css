@@ -125,7 +125,66 @@ header {
   padding: 0 3%;
   align-items: center;
 }
+.modal-pop{
+  position: fixed;
+  top: 10%;
+  left: 8%;
+  transform: translate(-50%, 50%)scale(0);
+  border-radius: 10px;
+  /* opacity: 0; */
+  z-index: 10;
+  width: 500px;
+  max-width: 80%;
+}
+.card-item-modal{
 
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 327px;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: var(--main-bg-color);
+
+}
+.modal-pop.active{
+  transform: translate(-50%, 50%)scale(1);
+  top: -25%;
+  left: 45%;
+}
+.modal{
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 5px 5px;
+}
+.close-x{
+  font-size: 2.25rem;
+  font-weight: bold;
+  background: none;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin-left: 10rem;
+  
+}
+
+#overlay{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0,0,0 .5);
+  pointer-events: none;
+}
+#overlay.active{
+  opacity: 1;
+  pointer-events: all;
+
+}
 .logo {
   display: flex;
   margin-top: 1.5rem;
