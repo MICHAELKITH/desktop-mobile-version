@@ -18,19 +18,25 @@
     <div class="container">
 
         <header>
-            <nav class="navbar">
 
-                <div class="logo">My Logo</div>
-                <div class="bar-toggle">
-                    <i class="fa fa-bars"></i>
 
-                </div>
+            <div class="logo">My Logo</div>
+            <div class="bar-toggle">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>
+            <nav class="menu hidden ">
+                <a id='close-menu' href="javascript:void(0)">&times</a>
                 <ul class="navbar-links">
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+
+                    <li class="nav-item current active"><a href="#">Home</a></li>
+                    <li class="nav-item "><a href="#work">Portfolio</a></li>
+                    <li class="nav-item"><a href="#about-self">About</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
         </header>
 
         <!-- small-container -->
@@ -74,7 +80,7 @@
 
 
         <!-- card-info -->
-        <section class="card-info">
+        <section class="card-info" id="work">
             <div class="card-item">
                 <div class="images-tags">
                     <a href="#">
@@ -190,7 +196,7 @@
         </section>
         <div class="about-contact">
             <!-- about myself -->
-            <section class="about">
+            <section class="about" id="about-self">
                 <div class="personal-info">
                     <h2>
                         About <br>
@@ -268,7 +274,7 @@
                 </div>
             </section>
             <!-- contact section -->
-            <section class="contact-me">
+            <section class="contact-me" id="contact">
                 <img class="eclipse" alt="Image missing">
                 <div class="content">
                     <h1>
@@ -295,6 +301,7 @@
             </section>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>

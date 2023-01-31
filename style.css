@@ -47,7 +47,7 @@
   }
 
   to {
-    left: 20px;
+    left: 200px;
   }
 }
 
@@ -116,21 +116,19 @@ li {
 
 header {
   width: 100%;
-  height: 48px;
-  top: 44px;
-  padding: 5%;
+  position: fixed;
+  height: 60px;
+  top: -1px;
   background-color: var(--main-bg-color);
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
   padding: 0 3%;
+  align-items: center;
 }
 
 .logo {
   display: flex;
-  align-self: flex-end;
+  margin-top: 1.5rem;
   animation: my-move 3s 1 linear 1s;
   width: 76px;
   height: 20px;
@@ -144,12 +142,40 @@ header {
 }
 
 .bar-toggle {
-  top: 0.75rem;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50px;
-  height: 21px;
-  color: #6070ff;
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.bar-toggle .btn-line {
+  width: 30px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background-color: #6070ff;
+  transition: all 0.5s ease-out;
+  border-radius: 10px;
+}
+
+/* Adding transform to the X */
+.bar-toggle.close {
+  transform: rotate(180deg);
+}
+
+/* Styling the three lines
+		to make it an X */
+.bar-toggle.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar-toggle.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.bar-toggle.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .bar-toggle > i {
@@ -162,8 +188,75 @@ header {
   color: #172b4d;
 }
 
-.navbar-links {
+.menu {
+  color: #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #6070ff;
+  overflow-x: hidden;
+  padding: 10px 30px 0 0;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+  mix-blend-mode: multiply;
+  animation: slideleft 0.5s 1 ease-in-out;
+}
+
+.hidden {
   display: none;
+}
+
+/* .navbar-links.show {
+  display: block;
+  margin-top: -1rem;
+  background-color: white;
+  height: 800px;
+  position: absolute;
+  left: 20;
+  right: 0;
+  width: 450px;
+} */
+
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+#close-menu {
+  align-self: flex-end;
+  font-size: 50px;
+  margin-left: 50px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* .navbar-links li {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 3rem;
+  margin-inline: 140px;
+  cursor: pointer;
+} */
+
+.navbar-links li a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--main-bg-color);
+  font-weight: 400;
+  font-size: 17pt;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.navbar-links li a:hover {
+  color: #000;
 }
 
 h1 {
@@ -188,11 +281,12 @@ h1 {
   border-bottom-left-radius: 85px;
   flex-direction: column;
   width: 100%;
+  margin-top: 5rem;
   padding-left: 0.9rem;
   background-image: url(./images/header-shapes\ mobile.png);
   background-repeat: no-repeat;
   background-color: var(--main-bg-color);
-  background-size: auto;
+  background-size: 90%;
 }
 
 .about {
@@ -568,31 +662,63 @@ button:disabled {
     top: -12vh;
     background: white;
     z-index: 1;
-  }
-
-  .navbar {
-    margin-top: 20px;
+    display: flex;
+    margin-top: 5rem;
+    flex-direction: row;
   }
 
   .logo {
     animation-play-state: running;
     align-self: center;
     animation-duration: 0.7s;
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
   }
 
   .bar-toggle {
     display: none;
   }
 
-  .navbar-links {
-    display: flex;
-    min-width: 35%;
-    color: #344563;
-    gap: 4em;
+  #close-menu {
+    display: none;
   }
 
-  .navbar-links > li > a {
+  .menu,
+  .navbar-links {
+    display: flex;
+    color: #344563;
+    gap: -40em;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    position: static;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .navbar-links li {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-inline: 20px;
+    cursor: pointer;
+  }
+
+  .navbar-links li a {
+    text-align: center;
     text-decoration: none;
+    font-weight: 400;
+    font-size: 17pt;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px -5px;
+    transition: 0.2s;
+    margin: 0 2px;
+    color: var(--secondary-text-color);
+  }
+
+  .navbar-links li a:hover {
+    color: #000;
   }
 
   .small-container {
