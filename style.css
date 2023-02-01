@@ -883,9 +883,9 @@ button:disabled {
     background-image: url("./images/contact\ form\ background\ shapes@2x.png");
     margin-top: 0;
     text-align: center;
-    background-color: #6070FF;
+    background-color: rgb(37.6%, 43.9%, 100%);
     padding: 5% 26%;
-    background-size:75% 65%;
+    background-size: 75% 65%;
     background-repeat: no-repeat;
     background-position: center;
     border-top-left-radius: 132px;
