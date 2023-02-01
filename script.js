@@ -271,7 +271,8 @@ btnExpand.forEach((button) => {
           }
           for (let j = 0; j < cardInfo[ind].buttons.length; j += 1) {
             btn[0].children[1].children[j].children[0].href = cardInfo[ind].buttons[0][j];
-            btn[0].children[1].children[j].children[0].children[0].src = cardInfo[ind].buttons[1][j];
+            const a1 = cardInfo[ind].buttons[1][j];
+            btn[0].children[1].children[j].children[0].children[0].src = a1;
           }
         }
       }
