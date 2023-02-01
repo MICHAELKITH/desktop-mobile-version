@@ -477,7 +477,7 @@ hr.solid {
 }
 
 .content {
-background-color: #6070ff;
+  background-color: #6070ff;
   text-align: center;
   color: white;
   margin-top: -718px;
@@ -568,15 +568,14 @@ button {
   background-color: #c5791c;
   max-width: 65%;
   font-size: 0.9rem;
-
 }
 
 #innermsg {
   font-size: 0.8rem;
   font-weight: 700;
-
 }
-#warning{
+
+#warning {
   font-weight: 700;
   color: red;
   font-size: 2rem;
