@@ -323,7 +323,7 @@ sec.forEach((section) => {
 const errorMessage = document.querySelector('.message');
 const form = document.querySelector('#myform');
 const getEmail = document.querySelector('#email');
-const formHtml= document.querySelector('html');
+const formHtml = document.querySelector('html');
 
 form.onsubmit = (event) => {
   event.preventDefault();
