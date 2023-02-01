@@ -33,7 +33,7 @@ modalBtn.forEach(button =>{
 })
 closeModalBtn.forEach(button =>{
   button.addEventListener('click', ()=>{
-    const modal = button.closest('.modal')
+    const modal = button.closest('.modal-pop')
    closeModal(modal)
   })
 })

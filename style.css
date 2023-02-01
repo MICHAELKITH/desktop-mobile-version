@@ -127,8 +127,8 @@ header {
 }
 .modal-pop{
   position: fixed;
-  top: 10%;
-  left: 8%;
+  top: -25%;
+  left: 45%;
   transform: translate(-50%, 50%)scale(0);
   border-radius: 10px;
   /* opacity: 0; */
