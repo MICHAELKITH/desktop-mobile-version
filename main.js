@@ -1,8 +1,10 @@
 const menuBtn = document.querySelector('.bar-toggle');
 const menu = document.querySelector('.menu');
 const closeBtn = document.getElementById('close-menu');
-// const menuNav = document.querySelector('.navbar-links');
 const navItems = document.querySelectorAll('.nav-item');
+const modalBtn =document.querySelectorAll('[data-modal-target]')
+const closeModalBtn =document.querySelectorAll('[data-close-btn]')
+const overlay = document.getElementById('overlay')
 
 menuBtn.addEventListener('click', () => {
   menu.classList.toggle('hidden');
@@ -16,11 +18,6 @@ navItems.forEach((link) => {
     menu.classList.toggle('hidden');
   });
 });
-
-
-const modalBtn =document.querySelectorAll('[data-modal-target]')
-const closeModalBtn =document.querySelectorAll('[data-close-btn]')
-const overlay = document.getElementById('overlay')
 
 overlay.addEventListener('click', ()=>{
   const modals =document.querySelectorAll('.modal.active')
