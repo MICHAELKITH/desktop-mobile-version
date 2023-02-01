@@ -477,12 +477,13 @@ hr.solid {
 }
 
 .content {
-  background: url("./images/Contact.png");
+  background-color: #6070ff;
   text-align: center;
   color: white;
   margin-top: -718px;
   padding-top: 40px;
   padding-bottom: 20px;
+  border-top-left-radius: 132px;
 }
 
 .content > h1 {
@@ -551,25 +552,35 @@ button {
 
 .message {
   visibility: hidden;
+  top: -10rem;
 }
 
 .message.active {
   visibility: visible;
   position: relative;
-  top: -25vh;
+  top: -55vh;
   left: 40%;
-  height: 15vh;
-  border-radius: 150px 80px 100px 15px;
+  height: 18vh;
+  border-radius: 10px;
   text-align: center;
   padding: 7%;
   border: none;
-  background: red;
+  background-color: #c5791c;
   max-width: 65%;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 #innermsg {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+#warning {
+  font-weight: 700;
+  color: red;
+  font-size: 2rem;
+  top: 2rem;
+  left: 10rem;
 }
 
 /* effects */

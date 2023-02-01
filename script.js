@@ -320,3 +320,21 @@ sec.forEach((section) => {
       }
     });
 });
+const errorMessage = document.querySelector('.message');
+const form = document.querySelector('#myform');
+const getEmail = document.querySelector('#email');
+const formHtml = document.querySelector('html');
+
+form.onsubmit = (event) => {
+  event.preventDefault();
+  const emailValue = getEmail.value.toLowerCase();
+  if (getEmail.value !== emailValue) {
+    errorMessage.classList.add('active');
+  } else {
+    form.submit();
+  }
+};
+
+formHtml.onclick = () => {
+  errorMessage.classList.remove('active');
+};
