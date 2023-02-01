@@ -130,11 +130,11 @@ header {
   position: fixed;
   top: -25%;
   left: 45%;
-  transform: translate(-50%, 50%) scale(0);
+  transform: translate(-50%, 50%) scale(1);
   border-radius: 10px;
 
   /* opacity: 0; */
-  z-index: 4;
+  z-index: 10;
   width: 500px;
   max-width: 80%;
 }
