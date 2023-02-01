@@ -885,7 +885,7 @@ button:disabled {
     text-align: center;
     background-color: #6070FF;
     padding: 5% 26%;
-    background-size: 100%;
+    background-size:75% 65%;
     background-repeat: no-repeat;
     background-position: center;
     border-top-left-radius: 132px;
