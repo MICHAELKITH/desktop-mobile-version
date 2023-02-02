@@ -338,3 +338,21 @@ form.onsubmit = (event) => {
 formHtml.onclick = () => {
   errorMessage.classList.remove('active');
 };
+
+// local storage
+
+form.addEventListener('input', () => {
+  const data = {
+    name: document.getElementById('user').value,
+    email: document.getElementById('email').value,
+    text: document.getElementById('text').value,
+  };
+
+  const storeData = JSON.stringify(data);
+  localStorage.setItem('mydata', storeData);
+});
+
+const getData = JSON.parse(localStorage.getItem('mydata'));
+document.getElementById('user').value = getData.name;
+document.getElementById('email').value = getData.email;
+document.getElementById('text').value = getData.text;
