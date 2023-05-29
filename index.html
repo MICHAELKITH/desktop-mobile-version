@@ -1,76 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Michael's Portfolio</title>
 </head>
-
 <body>
-
-    <!-- header -->
-    <div class="container">
-
+    <div class="wrapper">
         <header>
             <nav class="navbar">
-
-                <div class="logo">My Logo</div>
-                <div class="bar-toggle">
-                    <i class="fa fa-bars"></i>
-
-                </div>
+                <a class="logo" href="#"><img src="./images/My Logo.png" alt="Image-Missing"></a>
                 <ul class="navbar-links">
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="active-page"><a href="#work">Portfolio</a></li>
+                    <li><a href="#about-myself">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
+                <span class="union">
+                    <img class="hamburger">
+                </span>
             </nav>
         </header>
-
-        <!-- small-container -->
-        <section class="small-container">
+        <!-- Add code here -->
+        <section id="showmenu">
+            <div id="showDetails">
+                <h1 class="showtitle"></h1>
+                <span>
+                    <img src="./imagefile/Disabled.png" class="closeBtn" alt="">
+                </span>
+                    <ul class="showoutside">
+                    <li><p></p></li>
+                    <ul class="showinside">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </ul>
+                <div class="showthumbnail">
+                    <img src="" alt="">
+                </div>
+                <ul class="showdescription">
+                    <li class="showtext">
+                        <p></p>    
+                    </li>
+                    <li class="showbuttons">
+                        <ul class="showtech">
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                            <li><img src="" alt=""></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Add code here -->
+        <section class="headline">
             <h1>
                 I’m Michael <br>
                 Glad to see you!
             </h1>
-            <p class="paragraph-text">
-                I’m a software developer! I can help you build a product , feature or website Look through some of my
-                work and experience! If you like what you see and have a project you need coded, don’t hestiate to
-                contact me.
+            <p class="modal-body">
+                I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.
             </p>
-            <a href="#" class="social-link">
+            <a href="#" class="connect">
                 Let's connect
             </a>
-            <ul class="social-media-link">
-                <li class="social-icon">
+            <ul class="socials">
+                <li class="icons">
                     <a href="#">
-                        <img src="./images/Vector-1.png" alt="Vector-1">
+                       <img src="./images/Vector-1.png" alt="Image-Missing">
+
                     </a>
                 </li>
-                <li class="social-icon">
+                <li class="icons">
                     <a href="#">
+
                         <img src="./images/Linkedin icon.png" alt="Linkedin">
+
+                
                     </a>
                 </li>
-                <li class="social-icon">
+                <li class="icons">
                     <a href="#">
+
                         <img src="./images/Vector.png" alt="Vector">
+                
+
                     </a>
                 </li>
-                <li class="social-icon">
+                <li class="icons">
                     <a href="#">
-                        <img src="./images/Vector.svg" alt="vectorr">
+                        <img src="./images/Vector.svg" alt="vector
+         
                     </a>
                 </li>
             </ul>
         </section>
 
+        <!-- Works Section -->
+        <section class="works" id="work">
+        </section>
 
 
         <!-- card-info -->
@@ -157,35 +203,80 @@
                     </ul>
                     <a href="#" class="more-button">See Project</a>
                 </div>
+
+        <!-- about myself -->
+        <section class="about" id="about-myself">
+            <div class="personal-info"> 
+                <h1>
+                    About <br>
+                    Myself
+                </h1>
+                <p class="modal-body">
+                    I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.
+                </p>
+                <a href="#" class="connect">
+                    Let's connect
+                </a>
+                <ul class="socials">
+                    <li class="icons">
+                        <a href="#">
+                            <img src="./images/Vector-1.png" alt="Image-Missing">
+                        </a>
+                    </li>
+                    <li class="icons">
+                        <a href="#">
+                            <img src="./images/Linkedin icon.png" alt="Image-Missing">
+                        </a>
+                    </li>
+                    <li class="icons">
+                        <a href="#">
+                            <img src="./images/Vector.png" alt="Image-Missing">
+                        </a>
+                    </li>
+                    <li class="icons">
+                        <a href="#">
+                            <img src="./images/Vector.svg" alt="Image-Missing">
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="button-one">Get My Resume</a>
             </div>
-            <div class="card-item">
-                <div class="images-tags">
-                    <a href="#">
-                        <img class="img4" alt="Image missing">
-                    </a>
-                </div>
-                <div class="main-text">
-                    <h1 class="title title3">Multi-Post
-                        Stories</h1>
-                    <ul class="frame-2 frame-end">
-                        <li class="top-title top-title4">Canopy</li>
-                        <li class="details"><img src="./images/Counter.png" alt="Image missing"></li>
-                        <li class="details"><span class="end-stack">Back End Dev</span></li>
-                        <li class="details"><img src="./images/Counter.png" alt="Image missing"></li>
-                        <li class="details">2015</li>
-                    </ul>
-                    <p class="description">
-                        A daily selection of privately personalized reads; no accounts or sign-ups required.
-                    </p>
-                    <ul class="tags">
-                        <li><a href="#"><img src="./images/Tag.png" alt="Image missing"></a></li>
-                        <li class="tag-images-1"><a href="#"><img src="./images-portfolio-desktop/Tag.png"
-                                    alt="Image missing"></a></li>
-                        <li><a href="#"><img src="./images/Tag (1).png" alt="Image missing"></a></li>
-                        <li><a href="#"><img src="./images/Tag(2).png" alt="Image missing"></a></li>
-                    </ul>
-                    <a href="#" class="more-button-1">See Project</a>
-                </div>
+            <div class="skill-list">
+                <ul>
+                    <li>
+                        <span class="list-item">
+                            Languages <span><img src="./images/Disabled.png" alt="languages"></span>
+                        </span>
+                        <ul class="desk-languages">
+                            <li class="sub-language">
+                                <a href="#"><img src="./images/Ellipse 1.png" alt="JS"></a>
+                                <span class="inside-text">
+                                    JavaSript
+                                </span>
+                            </li>
+                            <li class="sub-language">
+                                <a href="#"><img src="./images//Ellipse 1 (1).png" alt="HTML"></a>
+                                <span class="inside-text">
+                                    HTML
+                                </span>
+                            </li>
+                            <li class="sub-language">
+                                <a href="#"><img src="./images//Ellipse 1 (2).png" alt="CSS"></a>
+                                <span class="inside-text">
+                                    CSS
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-item">Frameworks <span><img src="./images/Enabled.png" alt="frameworks"></span></li>
+                     <li>
+                        <hr class="solid">
+                     </li>
+                    <li class="list-item">Skills <span><img src="./images/Enabled.png" alt="Skills"></span></li>
+                    <li>
+                        <hr class="solid">
+                    </li>
+                </ul>
             </div>
         </section>
         <div class="about-contact">
@@ -294,7 +385,27 @@
                 </div>
             </section>
         </div>
+        <!-- contact section -->
+        <footer class="contact-me" id="contact">
+            <img class="eclipse" alt="Image-Missing">
+            <div class="content">
+                <h1>
+                    Contact me
+                </h1>
+                <p class="contact-text">
+                    If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it 
+                </p>
+                <form action="https://formspree.io/f/mvoyeelg" id="myform" class="my-form" method="post">
+                    <input name="user_name" id="user"type="text" placeholder="Name" maxlength="30" required>
+                    <input id="email" name="user_email" type="email" placeholder="Email" required>
+                    <textarea name="message" cols="30" id="text" rows="10" placeholder="Write your message here" maxlength="500" required></textarea>
+                    <button type="submit">Get In Touch</button><span class="message"> <span id="warning">&#9888;</span>Email Should be in lower case <br> <span id="innermsg">(Click Here!)</span></span>
+                    <hr class="round">
+                </form>
+            </div>
+        </footer>
     </div>
-</body>
 
+    <script src="./script.js"></script>
+</body>
 </html>
