@@ -1,5 +1,25 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap";
 
+:root {
+  --blue-color: #344563;
+  --main-bg-color: #fff;
+  --header-text-color: #172b4d;
+  --normal-text-color: #344563;
+  --secondary-text-color: #6070ff;
+  --light-text-color: #7f8cff;
+  --main-font-family: 'Poppins', sans-serif;
+  --detail-color: #71869a;
+  --black-color: #000;
+  --background-active-button: #2230d2;
+  --button-disabled-text-color: #5e6c84;
+  --gray-background-color: #e5e5e5;
+  --gray--light-color: #f7f7f9;
+  --tag-background-color: #ebebff;
+  --button-color: #396df2;
+  --tag-color: #7a869a;
+  --footer-background: hsl(234, 100%, 52%);
+}
+
 /* animations */
 @keyframes resize {
   from {
@@ -115,7 +135,17 @@ header {
 .logo {
   display: flex;
   align-self: flex-end;
-  animation: rotate 1s 1 linear 1s;
+  animation: my-move 3s 1 linear 1s;
+  width: 76px;
+  height: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #020432;
+  text-decoration: none;
+  cursor: pointer;
+
 }
 
 .union {
@@ -410,6 +440,25 @@ h1 {
   text-align: center;
   transition: background 2s;
 }
+
+
+.more-button-1 {
+  border: 1px solid #6070ff;
+  border-radius: 8px;
+  width: 138px;
+  height: 68px;
+  padding: 12px;
+  color: white;
+  gap: 10px;
+  background-color: var(--button-color);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17pt;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  transition: width 2s, height 4s;
 
 .button-one {
   width: 168px;
@@ -912,7 +961,7 @@ button:disabled {
     font-size: 20px;
     line-height: 28px;
     padding: 0 10%;
-    color: #ebebff;
+    color: hsl(0, 0%, 100%);
   }
 
   .round {
@@ -924,9 +973,14 @@ button:disabled {
   }
 }
 
+
+  .submit {
+    margin-left: 5rem;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
 @media (min-width: 940px) {
   .work-item {
     width: 86%;
+
   }
 
   .showinside {
